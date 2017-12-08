@@ -1,0 +1,27 @@
+ {% extends "base.html" %}
+
+ {% block the_body %}
+        <h2>Word Game</h2>
+
+        <p>Welcome to my Word Game!</p>
+        <p>Here are the rules:</p>
+        <!--
+             ul: unordered list (bullets),
+             ol: ordered list (numbers).
+        -->
+
+        <ol>
+            <li>You must create <b>7 words</b> using letters from a randomly generated word.
+            <li>You are <b>Timed</b>.
+            <li>The words must be <b>3 letters or more</b>.
+            <li>You <b>CANNOT</b> use the <b>same word twice</b>.
+            <li>You <b>CANNOT</b> use the <b>source word</b> as one of your 7 words.
+        </ol>
+
+        <form action='/processform' method="POST">
+
+        <button name="button" type="submit">Let's Play!</button>
+
+        </form>
+
+ {% endblock %}

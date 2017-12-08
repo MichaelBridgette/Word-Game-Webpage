@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<h1><b>LOSER</b></h1>
+
+<ul>
+{% for x in the_invalid %}
+<li><b>{{x}}</b> is invalid</li>
+{% endfor %}
+
+{% for y in the_used %}
+<li><b>{{y}}</b> is used more than once</li>
+{% endfor %}
+
+{% for z in the_short %}
+<li><b>{{z}}</b> is too short</li>
+{% endfor %}
+
+{% for j in the_long %}
+<li><b>{{j}}</b> is too long</li>
+{% endfor %}
+</ul>
+<form action='/getform'>
+<button name="button" type="submit">Try Again</button>
+</form>
+{% endblock %}

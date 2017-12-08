@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<ol>
+{% for word in the_answers %}
+<li>{{word}}</li>
+{% endfor %}
+</ol>
+<p>Your time was: {{the_time}} </p>
+
+
+<form action='/leaderboard' method="POST">
+<p>What is your name? <input type="text" name="username"></p>
+<input type = "submit" value = "Done">
+</form>
+{% endblock %}

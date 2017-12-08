@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<p><b>Leaderboard</b></p>
+
+<ol>
+{% for name in the_players %}
+  <li>
+    {{name}}
+
+    <b>{{the_dict[name]}}</b></li>
+{% endfor %}
+</ol>
+
+<p><b>{{the_name}}</b> your position is <b>{{the_pos}}</b></p>
+
+<form action='/getform'>
+<button name="button" type="submit">Play Again</button>
+</form>
+{% endblock %}

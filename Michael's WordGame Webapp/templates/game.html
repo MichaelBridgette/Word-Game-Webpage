@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+  <p>Your Word is: <b>{{the_word}}</b>
+  <p></p>
+
+
+
+
+  <form action='/gameover' method="POST">
+    <input type="text" name="answer">
+    <input type = "submit" value = "Done">
+  </form>
+{% endblock %}
